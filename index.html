@@ -3,16 +3,92 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>Hearing!</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
   </head>
   <body>
+    <h1>Hearing</h1>
+    <div class="intro">
+      
+      <br>
+      <h2>¿De qué trata esta web?</h2>
+      <p>La tinitis es un transtorno en el que una persona oye un pitido de cierta frecuencia de forma constante en una o ambas orejas. Contra la popular creencia de que "no es para tanto", esta web intenta enseñar que no es así.</p>
+      <br>
+      <h2>¿Cómo funciona?</h2>
+      <p>Para empezar, una persona con tinnitis deberá ponerse los auriculares y pulsar el botón "iniciar". En ese momento, una frecuencia empezará a sonar. Mediante la barra inferior, podrán cambiar la frecuencia que se oye. En el momento en que deje de oír el sonido, deberá mover la barra del sonido hasta que vuelva a oírla. Deberá repetirse el proceso para la otra oreja.</p>
+      <p>En este punto, el usuario sin tinnitis estará listo para ponerse los auriculares y oirá como oye alguien con tinnitis.</p>
+      <br>
+      <button id="letsStart">¡Empecemos!</button>
+    </div>
+
     <div class="interface">
-      <div class="options">
-        <button id="iniciar">Iniciar</button>
-      <input type="range" name="" id="range" min="150" max="1500">
+      <br>
+      <div class="config">
+        <div class="left">
+          <div class="instructions">
+            <p>Empecemos con la oreja izquierda.</p>
+            <p>Pulsa "iniciar" para empezar. Mueve la barra para cambiar la frecuencia.</p>
+            <p>Cuando dejes de escuchar la frecuencia por la oreja izquierda, pulsa "adelante".</p>
+          </div>
+          
+          <button id="iniciarLeft">Iniciar</button>
+  
+          <div class="optionsLeft">
+            <p id="rangeText">Mueve la siguiente barra para controlar <b>la frecuencia</b>:</p>
+            <input type="range" name="" id="rangeLeftFrec" min="150" max="3500">
+  
+            <p id="rangeText">Y, con esta barra, puedes controlar <b>el volumen</b>:</p>
+            <input type="range" name="" id="rangeLeftVol" min="0" max="100">
+  
+            <button id="stopLeft">Parar</button>
+            <button id="restartLeft" style="display: none;">Volver a reproducir</button>
+  
+            <button id="adelanteLeftFrec">Adelante</button>
+            <br>
+            <div class="show-frequency-left"></div>
+          </div>
+  
+        </div>     
+        <div class="right">
+          <div class="instructions">
+            <p>Empecemos con la oreja derecha.</p>
+            <p>Pulsa "iniciar" para empezar. Mueve la barra para cambiar la frecuencia.</p>
+            <p>Cuando dejes de escuchar la frecuencia por la oreja derecha, pulsa "adelante".</p>
+          </div>
+  
+          <div class="optionsRight">
+            <p id="rangeText">Mueve la siguiente barra para controlar <b>la frecuencia</b>:</p>
+            <input type="range" name="" id="rangeRightFrec" min="150" max="3500">
+  
+            <p id="rangeText">Y, con esta barra, puedes controlar <b>el volumen</b>:</p>
+            <input type="range" name="" id="rangeRightVol" min="0" max="100">
+  
+            <button id="stopRight">Parar</button>
+            <button id="restartRight" style="display: none;">Volver a reproducir</button>
+  
+            <button id="adelanteRightFrec">Adelante</button>
+            <br>
+            <div class="show-frequency-right"></div>
+          </div>
+  
+        </div>
       </div>
-      <div class="show-frequency"></div>
+
+      <div class="result">
+        <div class="instructions">
+          <p>¡Perfecto! Ya está todo listo.</p>
+          <p>Ahora, dale los auriculares a otra persona. Cuando esté listo, pulsa "iniciar".</p>
+          <p>Entonces, los demás podrán escuchar lo que tú escuchas siempre.</p>
+        </div>
+        <br>
+        <button id="finalButton">Iniciar</button>
+        <br>
+        <br>
+        <div class="show-frequency" style="display: none;"></div>
+      </div>
+      
     </div>
 
     <script src="script.js"></script>

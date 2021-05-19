@@ -1,34 +1,92 @@
 * {
-  padding: 0;
-  margin: 0;
-}
+    padding: 0;
+    margin: 0;
+    font-family: 'Itim';
+  }
+  
+ h1 {
+    font-size: 4em;
+    text-align: center;
+  }
 
-body {
-  background-color: #ededed;
-}
+  .intro h2 {
+    font-size: 2.1em;
+    padding-bottom: 10px;
+  }
+  
+  .intro p {
+    text-align: justify;
+    font-size: 1.4em;
+  }
 
-button {
-  padding: 7px;
-  background-color: #047;
-  color: #fff;
-  font-size: 19px;
-  border: none;
-  margin: 20px auto;
-  display: block;
-  border-radius: 5px;
-}
+  .interface h2 {
+    font-size: 2.1em;
+  }
 
-input {
-  width: 50%;
-  margin: 10px 25%;
-}
+  .interface p {
+    font-size: 1.4em;
+  }
+  
+  .instructions {
+    background-color: rgba(0, 67, 119, 0.219);
+    text-align: center;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #047;
+    padding: 10px;
+  }
+  
+  body {
+    background-color: #ededed;
+    padding: 30px;
+  }
+  
+  button {
+    padding: 7px;
+    background-color: #047;
+    color: #fff;
+    font-size: 19px;
+    border: none;
+    margin: 20px auto;
+    display: block;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: rgba(0, 67, 119, 0.747);
+    transition: 1s;
+  }
+  
+  button:not(hover) {
+    transition: 1s;
+  }
+  
+  input {
+    width: 50%;
+    margin: 10px 25%;
+  }
+  
+  .interface, .result {
+    display: none;
+  }
 
-.show-frequency {
-  background-color: #047;
-  color: #fff;
-  padding: 30px;
-  font-size: 50px;
-  margin-top: 25px;
-  text-align: center;
-  border-radius: 5px;
+  .optionsLeft, .optionsRight {
+    display: none;
+    text-align: center;
+  }
+
+  .right {
+      display: none;
+  }
+  
+  .show-frequency, .show-frequency-left, .show-frequency-right {
+    background-color: #047;
+    color: #fff;
+    padding: 30px;
+    font-size: 20px;
+    margin-top: 25px;
+    text-align: center;
+    border-radius: 5px;
+    border-color: rgb(0, 15, 27);
+    border-style: solid;
 }
