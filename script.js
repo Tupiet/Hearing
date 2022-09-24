@@ -101,7 +101,7 @@ function cambiarFrequenciaLeft() {
 // Això s'activa al moure la barra del so.
 function cambiarVolumenLeft() {
   let rangeLeftVol = document.getElementById('rangeLeftVol').value;
-  let volume = rangeLeftVol / 100;
+  let volume = rangeLeftVol / 1000;
   leftGain.gain.value = volume;
   leftSound = rangeLeftVol;
 }
@@ -132,7 +132,7 @@ function cambiarFrequenciaRight() {
 // I això serveix per a canviar el volum.
 function cambiarVolumenRight() {
   let rangeRightVol = document.getElementById('rangeRightVol').value;
-  let volume = rangeRightVol / 100;
+  let volume = rangeRightVol / 1000;
   rightGain.gain.value = volume;
   rightSound = rangeRightVol;
 }
@@ -142,10 +142,10 @@ function cambiarVolumenRight() {
 // ara els reprodueix tots.
 function final() {
   leftOscillator.frequency.value = leftFrec;
-  leftGain.gain.value = leftSound / 100;
+  leftGain.gain.value = leftSound / 1000;
 
   rightOscillator.frequency.value = rightFrec;
-  rightGain.gain.value = rightSound / 100;
+  rightGain.gain.value = rightSound / 1000;
 
   leftOscillator.connect(leftGain).connect(merger, 0, 0);
   rightOscillator.connect(rightGain).connect(merger, 0, 1);
